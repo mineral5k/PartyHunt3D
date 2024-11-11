@@ -10,16 +10,16 @@ public class Dragon : MonoBehaviour
 
     private float maxHealth;
     public float curHealth;
-    public float Deffense;
-    public float Attack;
+    public float deffense;
+    public float attack;
 
     
 
     private void Awake()
     {
         maxHealth = baseHealth * Mathf.Pow(1.2f,GameManager.Instance.stageLevel);
-        Deffense = baseDeffense * Mathf.Pow(1.2f, GameManager.Instance.stageLevel);
-        Attack = baseAttack * Mathf.Pow(1.2f, GameManager.Instance.stageLevel);
+        deffense = baseDeffense * Mathf.Pow(1.2f, GameManager.Instance.stageLevel);
+        attack = baseAttack * Mathf.Pow(1.2f, GameManager.Instance.stageLevel);
 
         curHealth = maxHealth;
        
