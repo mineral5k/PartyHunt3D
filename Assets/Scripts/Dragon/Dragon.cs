@@ -12,6 +12,7 @@ public class Dragon : MonoBehaviour
     public float curHealth;
     public float deffense;
     public float attack;
+    public Character[] characters = new Character[3];
 
     
 
@@ -22,6 +23,26 @@ public class Dragon : MonoBehaviour
         attack = baseAttack * Mathf.Pow(1.2f, GameManager.Instance.stageLevel);
 
         curHealth = maxHealth;
-       
+    }
+
+    IEnumerator Attack()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1.0f);
+            GetTarget().GetAttacked();
+        }
+    }
+
+    Character GetTarget()
+    {
+        int i;
+        for (i=0; i<4;i++)
+        {
+            if (characters[i] != null) return characters[i];
+        }
+        GameManager.Instance.GameOver();
+        return null;
+            
     }
 }
