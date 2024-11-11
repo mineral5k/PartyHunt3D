@@ -10,8 +10,8 @@ public class Dragon : MonoBehaviour
 
     private float maxHealth;
     public float curHealth;
-    private float Deffense;
-    private float Attack;
+    public float Deffense;
+    public float Attack;
 
     
 
