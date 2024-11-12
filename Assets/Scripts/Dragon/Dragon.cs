@@ -9,7 +9,7 @@ public class Dragon : MonoBehaviour
     public float baseHealth = 1000f;
     public float baseDeffense = 50f;
     public float baseAttack = 100f;
-    public int baseReward = 1000;
+    public int baseReward = 2000;
     public int reward;
 
 
@@ -40,10 +40,10 @@ public class Dragon : MonoBehaviour
 
         curHealth = maxHealth;
 
-        StartCoroutine(Attack());
+        StartCoroutine(NormalAttack());
     }
 
-    IEnumerator Attack()
+    IEnumerator NormalAttack()
     {
         while (true)
         {
@@ -62,6 +62,14 @@ public class Dragon : MonoBehaviour
         GameManager.Instance.GameOver();                                        // 탱커, 딜러가 없다 => 힐러만 남았으므로 게임 오버 (힐러의 힐로 인해 무한히 스테이지 지속되는걸 막기 위함)
         return null;
             
+    }
+
+    public void Attack(Character character, float attack)
+    {
+        if (character == null) return;
+        float damage = attack - character.deffense;
+        if (damage < 0) damage = 0f;
+        character.CurHealth -= damage;
     }
 
     public void Die()
