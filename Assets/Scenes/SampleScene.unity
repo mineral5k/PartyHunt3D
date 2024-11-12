@@ -1688,6 +1688,7 @@ GameObject:
   - component: {fileID: 694516284}
   - component: {fileID: 694516283}
   - component: {fileID: 694516282}
+  - component: {fileID: 694516285}
   m_Layer: 5
   m_Name: DealerShopButton
   m_TagString: Untagged
@@ -1758,7 +1759,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 694516283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 694516285}
+        m_TargetAssemblyTypeName: ShopJobSelectButton, Assembly-CSharp
+        m_MethodName: SelectDealer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &694516283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,6 +1810,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694516280}
   m_CullTransparentMesh: 1
+--- !u!114 &694516285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694516280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b62dabfc714f75469085562bb2348e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &771950313
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3675,6 +3700,7 @@ GameObject:
   - component: {fileID: 1407624981}
   - component: {fileID: 1407624980}
   - component: {fileID: 1407624979}
+  - component: {fileID: 1407624982}
   m_Layer: 5
   m_Name: HealerShopButton
   m_TagString: Untagged
@@ -3745,7 +3771,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1407624980}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1407624982}
+        m_TargetAssemblyTypeName: ShopJobSelectButton, Assembly-CSharp
+        m_MethodName: SelectHealer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1407624980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3784,6 +3822,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407624977}
   m_CullTransparentMesh: 1
+--- !u!114 &1407624982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407624977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b62dabfc714f75469085562bb2348e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1443213254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4224,6 +4274,7 @@ GameObject:
   - component: {fileID: 1660329132}
   - component: {fileID: 1660329131}
   - component: {fileID: 1660329130}
+  - component: {fileID: 1660329133}
   m_Layer: 5
   m_Name: TankerShopButton
   m_TagString: Untagged
@@ -4294,7 +4345,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1660329131}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660329133}
+        m_TargetAssemblyTypeName: ShopJobSelectButton, Assembly-CSharp
+        m_MethodName: SelectTanker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1660329131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4333,6 +4396,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660329128}
   m_CullTransparentMesh: 1
+--- !u!114 &1660329133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660329128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b62dabfc714f75469085562bb2348e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1703313250
 GameObject:
   m_ObjectHideFlags: 0

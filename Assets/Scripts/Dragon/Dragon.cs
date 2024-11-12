@@ -55,11 +55,11 @@ public class Dragon : MonoBehaviour
     Character GetTarget()
     {
         int i;
-        for (i=0; i<3;i++)
+        for (i=0; i<2;i++)
         {
             if (characters[i] != null) return characters[i];                    // 탱커, 딜러, 힐러의 우선순위로 공격
         }
-        GameManager.Instance.GameOver();                                        // 공격 대상이 없다 = 모든 캐릭터 사망이므로 게임 오버
+        GameManager.Instance.GameOver();                                        // 탱커, 딜러가 없다 => 힐러만 남았으므로 게임 오버 (힐러의 힐로 인해 무한히 스테이지 지속되는걸 막기 위함)
         return null;
             
     }
