@@ -14,16 +14,21 @@ public class GameManager : MonoBehaviour
     public int TankerHealthLevel = 0;
     public int TankerAttackLevel = 0;
     public int TankerDeffenseLevel = 0;
+    public bool isTankerSkillPurchased = false;
 
     [Header("Dealer Level")]
     public int DealerHealthLevel = 0;
     public int DealerAttackLevel = 0;
     public int DealerDeffenseLevel = 0;
+    public bool isDealerSkillPurchased = false;
+
 
     [Header("Healer Level")]
     public int HealerHealthLevel = 0;
     public int HealerAttackLevel = 0;
     public int HealerDeffenseLevel = 0;
+    public bool isHealerSkillPurchased = false;
+
 
     private void Awake()
     {

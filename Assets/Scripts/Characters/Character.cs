@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     public float baseHealth;
     public float maxHealth;
     public float curHealth;
+    public bool isShield;
     public float CurHealth
     {
         get { return curHealth; }
@@ -37,6 +38,11 @@ public class Character : MonoBehaviour
     {
         float damage = dragon.attack - deffense;
         if (damage < 0)  damage = 0f;
+        if (isShield)
+        {
+            damage = 0f;
+            isShield = false;
+        }
         CurHealth -= damage;
     }
 

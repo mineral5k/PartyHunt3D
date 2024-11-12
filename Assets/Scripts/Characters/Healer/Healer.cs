@@ -20,7 +20,7 @@ public class Healer : Character
         attack = baseAttack * Mathf.Pow(1.2f, GameManager.Instance.HealerAttackLevel);
 
         curHealth = maxHealth;
-
+        if (GameManager.Instance.isHealerSkillPurchased) gameObject.AddComponent<HealerSkill>();
         StartCoroutine(NormalHeal());
     }
 

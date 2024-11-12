@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Tanker : Character
 {
-
      
     private void Awake()
     {
@@ -19,6 +18,7 @@ public class Tanker : Character
         maxHealth = baseHealth * Mathf.Pow(1.2f, GameManager.Instance.TankerHealthLevel);
         deffense = baseDeffense * Mathf.Pow(1.2f, GameManager.Instance.TankerDeffenseLevel);
         attack = baseAttack * Mathf.Pow(1.2f, GameManager.Instance.TankerAttackLevel);
+        if (GameManager.Instance.isTankerSkillPurchased) gameObject.AddComponent<TankerSkill>();
 
         curHealth = maxHealth;
 

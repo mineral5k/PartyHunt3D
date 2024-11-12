@@ -20,6 +20,7 @@ public class Dealer : Character
 
         curHealth = maxHealth;
 
+        if (GameManager.Instance.isDealerSkillPurchased) gameObject.AddComponent<DealerSkill>();
         StartCoroutine(NormalAttack());
     }
 }
