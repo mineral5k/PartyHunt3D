@@ -41,12 +41,18 @@ public class Healer : Character
         return dragon.characters[target];
     }
 
+    public void Heal(Character character)
+    {
+        if (character == null) return;
+        character.CurHealth += attack;
+    }
+
     IEnumerator NormalHeal()
     {
         while (true)
         {
-             yield return new WaitForSeconds(((float)(new Random().Next(100, 111))) / 100);
-            GetHealTarget().CurHealth += attack;
+             yield return new WaitForSeconds(new Random().Next(100, 111) / 100f);
+             Heal(GetHealTarget());
         }
     }
 }
