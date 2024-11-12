@@ -4385,15 +4385,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9a4dcd694d9e47b6a358b9ca66ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageLevel: 0
+  stageLevel: 12
   gold: 0
-  TankerHealthLevel: 0
+  TankerHealthLevel: 40
   TankerAttackLevel: 0
   TankerDeffenseLevel: 0
-  DealerHealthLevel: 0
+  DealerHealthLevel: 40
   DealerAttackLevel: 0
   DealerDeffenseLevel: 0
-  HealerHealthLevel: 0
+  HealerHealthLevel: 40
   HealerAttackLevel: 0
   HealerDeffenseLevel: 0
 --- !u!4 &1618070208

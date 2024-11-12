@@ -79,5 +79,4 @@ public class Dragon : MonoBehaviour
         GameManager.Instance.GameClear();
     }
 
-   
 }

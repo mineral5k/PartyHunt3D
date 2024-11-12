@@ -15,18 +15,30 @@ public class Burn : MonoBehaviour,IDebuff
     private void Awake()
     {
         character = GetComponent<Character>();
+        
+    }
+
+    void Start()
+    {
+        StartCoroutine(DotDamage());
+        StartCoroutine(TimeOver());
         time = Time.time;
     }
 
-
     IEnumerator DotDamage()
     {
-        while (Time.time - time >9.9f)
+        while (true)
         {
             yield return new WaitForSeconds(0.5f);
+            Debug.Log("½ÇÇà");
             character.CurHealth -= character.dragon.attack * 0.1f;
-        }
+        }       
+    }
 
+    IEnumerator TimeOver()
+    {
+        yield return new WaitForSeconds(5f);
+        StopCoroutine(DotDamage());
         Destroy(GetComponent<Burn>());
     }
 }

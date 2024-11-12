@@ -11,6 +11,11 @@ public class DragonSkillManager : MonoBehaviour
         {
             gameObject.AddComponent<Breath>();    // 일정 간격으로 적 전체 공격
         }
+
+        if (GameManager.Instance.stageLevel >= 6)
+        {
+            gameObject.AddComponent<Fireball>();  // 적에게 화상 디버프를 남김
+        }
     }
 
     
