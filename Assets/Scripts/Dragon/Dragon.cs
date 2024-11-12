@@ -41,6 +41,7 @@ public class Dragon : MonoBehaviour
         curHealth = maxHealth;
 
         StartCoroutine(NormalAttack());
+        StartCoroutine(CheckLoop());            // 서로 데미지를 주지 못해 게임이 끝나지 않는 상황을 방지하는 코드
     }
 
     IEnumerator NormalAttack()
@@ -79,4 +80,18 @@ public class Dragon : MonoBehaviour
         GameManager.Instance.GameClear();
     }
 
+    IEnumerator CheckLoop()              // 서로 데미지를 주지 못해 게임이 끝나지 않는 상황을 방지하는 코드
+    {
+        while(true)
+        {
+            float hp1 = CurHealth;
+            yield return new WaitForSeconds(10f);
+            float hp2 = CurHealth;
+
+            if (hp1 == hp2)
+            {
+                GameManager.Instance.GameOver();
+            }
+        }
+    }
 }
