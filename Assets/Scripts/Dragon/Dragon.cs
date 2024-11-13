@@ -11,6 +11,8 @@ public class Dragon : MonoBehaviour
     public float baseAttack = 100f;
     public int baseReward;
     public int reward;
+    public bool isDead = false;
+    public bool isOver=false;
 
 
     public float maxHealth;
@@ -66,7 +68,11 @@ public class Dragon : MonoBehaviour
             if (characters[i] != null) return characters[i];                    // 탱커, 딜러, 힐러의 우선순위로 공격
         }
         GameManager.Instance.gold += (int)Mathf.Round(reward * 0.5f);
-        GameManager.Instance.GameOver();                                        // 탱커, 딜러가 없다 => 힐러만 남았으므로 게임 오버 (힐러의 힐로 인해 무한히 스테이지 지속되는걸 막기 위함)
+        if (!isOver)
+        {
+            GameManager.Instance.GameOver();                                        // 탱커, 딜러가 없다 => 힐러만 남았으므로 게임 오버 (힐러의 힐로 인해 무한히 스테이지 지속되는걸 막기 위함)
+            isOver = true;
+        }
         return null;
             
     }
@@ -81,6 +87,9 @@ public class Dragon : MonoBehaviour
 
     public void Die()
     {
+        if(isDead) return; 
+        isDead = true;
+        animator.SetTrigger("Death");
         GameManager.Instance.gold += reward;
         GameManager.Instance.GameClear();
     }

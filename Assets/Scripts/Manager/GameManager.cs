@@ -51,13 +51,17 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         stageLevel--;
-        SceneManager.LoadScene("SampleScene");
+        Invoke("Restart", 0.5f);
     }
 
     public void GameClear()
     {
         stageLevel++;
+        Invoke("Restart", 2.5f);
+    }
+
+    public void Restart()
+    {
         SceneManager.LoadScene("SampleScene");
     }
-   
 }

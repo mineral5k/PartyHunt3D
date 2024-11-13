@@ -30,7 +30,8 @@ public class Healer : Character
         float minHealthPercent = 1.1f;
         for (int i = 0; i < 3; i++)
         {
-            if (dragon.characters[i] == null) continue;
+            if ((dragon.characters[i] == null)|| dragon.characters[i].isDead) continue;
+            
             if(dragon.characters[i].healthPercent<minHealthPercent)
             {
                 target = i;
@@ -44,10 +45,10 @@ public class Healer : Character
     public void Heal(Character character)
     {
         if (character == null) return;
+        animator.SetTrigger("Heal");
         character.CurHealth += attack;
         ParticleSystem ps = Instantiate(GameManager.Instance.myParticle, character.transform.position, Quaternion.identity);
-        Destroy(ps,1f);
-        
+        Destroy(ps.gameObject,1f);
     }
 
     IEnumerator NormalHeal()

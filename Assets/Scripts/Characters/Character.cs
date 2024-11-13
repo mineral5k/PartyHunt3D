@@ -28,11 +28,12 @@ public class Character : MonoBehaviour
     public bool isDead = false;
 
     public Dragon dragon;
+    public Animator animator;
 
 
     protected virtual void Start()
     {
-        
+        animator = GetComponentInChildren<Animator>();
     }
     public void GetAttacked()
     {
@@ -49,11 +50,14 @@ public class Character : MonoBehaviour
     public void Die()
     {
         isDead = true;
-        Destroy(gameObject);
+        animator.SetTrigger("Death");
+        isDead = true;
+        Destroy(gameObject,1f);
     }
     
     public void Attack()
     {
+        animator.SetTrigger("Attack");
         float damage = attack - dragon.deffense;
         if (damage < 0) damage = 0f;
         dragon.CurHealth -= damage;
