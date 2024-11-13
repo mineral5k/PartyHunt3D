@@ -28,8 +28,12 @@ public class Dragon : MonoBehaviour
     public float deffense;
     public float attack;
     public Character[] characters = new Character[3];
+    public Animator animator;
 
-    
+    private void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
 
     private void Start()
     {
@@ -50,6 +54,7 @@ public class Dragon : MonoBehaviour
         {
             yield return new WaitForSeconds(((float)(new Random().Next(100, 111))) / 100);      // 1.0~1.1 초 사이에 랜덤하게 실행
             GetTarget()?.GetAttacked();
+            animator.SetTrigger("Attack");
         }
     }
 
