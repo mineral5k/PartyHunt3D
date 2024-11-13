@@ -4637,6 +4637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9a4dcd694d9e47b6a358b9ca66ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myParticle: {fileID: 4204698503294071456, guid: 6303fbf8cbcc1804ba7df94a2304d27c, type: 3}
   stageLevel: 20
   gold: 0
   TankerHealthLevel: 100

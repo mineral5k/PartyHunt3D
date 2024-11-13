@@ -45,6 +45,9 @@ public class Healer : Character
     {
         if (character == null) return;
         character.CurHealth += attack;
+        ParticleSystem ps = Instantiate(GameManager.Instance.myParticle, character.transform.position, Quaternion.identity);
+        Destroy(ps,1f);
+        
     }
 
     IEnumerator NormalHeal()

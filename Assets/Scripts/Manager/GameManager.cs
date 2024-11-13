@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public ParticleSystem myParticle;
     public int stageLevel = 1;
     public int gold = 0;
 
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     public int HealerAttackLevel = 0;
     public int HealerDeffenseLevel = 0;
     public bool isHealerSkillPurchased = false;
+
 
 
     private void Awake()
