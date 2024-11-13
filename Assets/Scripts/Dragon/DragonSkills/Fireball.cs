@@ -21,6 +21,7 @@ public class Fireball : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(new Random().Next(9, 12));
+            dragon.animator.SetTrigger("Burn");
             BurningPlayer(dragon.characters[0]);
             BurningPlayer(dragon.characters[1]);
             BurningPlayer(dragon.characters[2]);

@@ -45,7 +45,7 @@ public class Dragon : MonoBehaviour
         curHealth = maxHealth;
 
         StartCoroutine(NormalAttack());
-        StartCoroutine(CheckLoop());            // 서로 데미지를 주지 못해 게임이 끝나지 않는 상황을 방지하는 코드
+        //StartCoroutine(CheckLoop());            // 서로 데미지를 주지 못해 게임이 끝나지 않는 상황을 방지하는 코드
     }
 
     IEnumerator NormalAttack()

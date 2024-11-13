@@ -2259,6 +2259,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9586004, guid: eb58e8f2831a51f45a44a261e6710cdd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8e6a3de341c47e14182e5fa9ffaf3224, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4633,17 +4637,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9a4dcd694d9e47b6a358b9ca66ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageLevel: 0
+  stageLevel: 20
   gold: 0
-  TankerHealthLevel: 0
+  TankerHealthLevel: 100
   TankerAttackLevel: 0
   TankerDeffenseLevel: 0
   isTankerSkillPurchased: 0
-  DealerHealthLevel: 0
+  DealerHealthLevel: 100
   DealerAttackLevel: 0
   DealerDeffenseLevel: 0
   isDealerSkillPurchased: 0
-  HealerHealthLevel: 0
+  HealerHealthLevel: 100
   HealerAttackLevel: 0
   HealerDeffenseLevel: 0
   isHealerSkillPurchased: 0
@@ -5870,6 +5874,7 @@ MonoBehaviour:
   - {fileID: 254164654}
   - {fileID: 512133357}
   - {fileID: 1144381419}
+  animator: {fileID: 0}
 --- !u!114 &2078632773
 MonoBehaviour:
   m_ObjectHideFlags: 0
