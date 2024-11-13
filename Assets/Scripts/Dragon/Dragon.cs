@@ -79,7 +79,8 @@ public class Dragon : MonoBehaviour
 
     public void Attack(Character character, float attack)
     {
-        if (character == null) return;
+        
+        if ((character == null) || isDead ) return;
         float damage = attack - character.deffense;
         if (damage < 0) damage = 0f;
         character.CurHealth -= damage;
