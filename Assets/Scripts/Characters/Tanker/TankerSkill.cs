@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankerSkill : MonoBehaviour
+public class TankerSkill : MonoBehaviour,ICharacterSkill
 {
     public string SkillName { get; set; }
     public string SkillDescription { get; set; }

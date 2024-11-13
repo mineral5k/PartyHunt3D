@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealerSkill : MonoBehaviour
+public class HealerSkill : MonoBehaviour,ICharacterSkill
 {
     public string SkillName { get; set; }
     public string SkillDescription { get; set; }

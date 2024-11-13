@@ -31,7 +31,7 @@ public class Burn : MonoBehaviour,IDebuff
         {
             yield return new WaitForSeconds(0.5f);
             Debug.Log("½ÇÇà");
-            character.CurHealth -= character.dragon.attack * 0.1f;
+            character.CurHealth -= character.dragon.attack * 0.05f;
         }       
     }
 
