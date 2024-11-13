@@ -3534,6 +3534,7 @@ MonoBehaviour:
   isDead: 0
   dragon: {fileID: 2078632772}
   animator: {fileID: 0}
+  myParticle: {fileID: 4204698503294071456, guid: 6303fbf8cbcc1804ba7df94a2304d27c, type: 3}
 --- !u!4 &1216749080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013636529830, guid: 8aa8a0d6151709d468a12ff31a143ee2, type: 3}
@@ -5792,6 +5793,8 @@ MonoBehaviour:
   baseAttack: 100
   baseReward: 2000
   reward: 2000
+  isDead: 0
+  isOver: 0
   maxHealth: 0
   curHealth: 0
   deffense: 0

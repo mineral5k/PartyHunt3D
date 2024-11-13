@@ -5,6 +5,8 @@ using Random = System.Random;
 
 public class Healer : Character
 {
+    public ParticleSystem myParticle;
+
     private void Awake()
     {
         baseHealth = 120;
@@ -47,7 +49,7 @@ public class Healer : Character
         if (character == null) return;
         animator.SetTrigger("Heal");
         character.CurHealth += attack;
-        ParticleSystem ps = Instantiate(GameManager.Instance.myParticle, character.transform.position, Quaternion.identity);
+        ParticleSystem ps = Instantiate(myParticle, character.transform.position, Quaternion.identity);
         Destroy(ps.gameObject,1f);
     }
 
