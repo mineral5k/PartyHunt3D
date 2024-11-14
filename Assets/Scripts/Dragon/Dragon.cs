@@ -62,6 +62,7 @@ public class Dragon : MonoBehaviour
 
     Character GetTarget()
     {
+        if(isDead) return null;
         int i;
         for (i=0; i<2;i++)
         {
